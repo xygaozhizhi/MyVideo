@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.myvideo.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.administrator.myvideo.main.MainActivity">
+    <!--标题栏-->
+    <!--FrameLayout-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-</android.support.constraint.ConstraintLayout>
+    <!--RadioGroup-->
+    <RadioGroup
+        android:id="@+id/rg_button_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <RadioButton
+            android:id="@+id/rb_video"
+            style="@style/button_tag_style"
+            android:drawableTop="@drawable/rb_audio_drawable_selector"
+            android:text="@string/rb_main_video" />
+
+        <RadioButton
+            android:id="@+id/rb_audio"
+            style="@style/button_tag_style"
+            android:drawableTop="@drawable/rb_video_drawable_selector"
+            android:text="@string/rb_main_audio" />
+
+        <RadioButton
+            android:id="@+id/rb_net_video"
+            style="@style/button_tag_style"
+            android:drawableTop="@drawable/rb_net_video_drawable_selector"
+            android:text="@string/rb_main_net_video" />
+
+        <RadioButton
+            android:id="@+id/rb_net_audio"
+            style="@style/button_tag_style"
+            android:drawableTop="@drawable/rb_net_audio_drawable_selector"
+            android:text="@string/rb_main__net_audio" />
+
+    </RadioGroup>
+
+
+</LinearLayout>

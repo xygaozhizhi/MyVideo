@@ -3,11 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.myvideo.MainActivity">
+    android:background="@android:color/white"
+    tools:context="com.example.administrator.myvideo.welcome.WelcomeActivity">
 
     <ImageView
+        android:id="@+id/iv_welcome_icon"
+        android:layout_centerInParent="true"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="" />
+        android:src="@drawable/logo_icon" />
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_welcome_icon"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:text="@string/tv_welcome"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"/>
+    </LinearLayout>
 
 </RelativeLayout>
